@@ -1,0 +1,15 @@
+html
+    head
+        title= title
+        link(rel="stylesheet", href="/css/styles.css")
+    body
+        div(class=["container"])
+            h1(id="myH1")= title
+        
+            a(href="/") Home 
+            a(href="/Items") Items
+            a(href="/order") Orders
+        ul
+             each contact in contactData
+                li(class = "Person")= "Name: "+contact.playerName +" - Main commander: "+ contact.commander +" - Main Style: "+ contact.style +" - Email: "+ contact.email
+        script(src="/js/scripts.js")

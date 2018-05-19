@@ -1,0 +1,16 @@
+html
+    head
+        title= title
+        link(rel="stylesheet", href="/css/styles.css")
+    body
+        h1(id="myH1")= title
+        div(class=["container"])
+            a(href="/") Home 
+            a(href="/Items") Items
+            a(href="/order") Orders
+           
+            div(class="contacts")
+                ul
+                    each item in Items
+                        li(class="Card")= item.name +'-'+item.image +' - ' + item.price + ' - '+ item.description 
+        script(src="/js/scripts.js")
